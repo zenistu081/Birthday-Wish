@@ -1,1 +1,439 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffb6d9,#ff7eb3,#ff5d9e);
+background-size:300% 300%;
+animation:bgMove 12s ease infinite;
+color:#ffffff;
+overflow-x:hidden;
+min-height:100vh;
+}
+
+/* ========================= */
+/* ANIMATED BACKGROUND */
+/* ========================= */
+
+@keyframes bgMove{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
+
+/* ========================= */
+/* COMMON */
+/* ========================= */
+
+.hidden{
+display:none;
+}
+
+.screen{
+width:100%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+
+.glass{
+width:min(92%,900px);
+padding:35px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+border-radius:30px;
+border:1px solid rgba(255,255,255,.25);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+text-align:center;
+}
+
+.title{
+font-size:3rem;
+margin-bottom:10px;
+text-shadow:0 0 12px rgba(255,255,255,.8);
+}
+
+.subtitle{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.intro{
+font-size:1.1rem;
+line-height:1.8;
+margin-bottom:30px;
+white-space:pre-line;
+}
+
+.mainBtn{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ffffff;
+color:#ff2f73;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.mainBtn:hover{
+transform:translateY(-4px) scale(1.05);
+}/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero{
+padding:60px 20px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.8rem;
+margin-bottom:15px;
+text-shadow:0 0 10px rgba(255,255,255,.7);
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+line-height:1.8;
+}
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+
+#gallery{
+padding:50px 20px;
+text-align:center;
+}
+
+#gallery h2{
+font-size:2rem;
+margin-bottom:30px;
+}
+
+.galleryGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.photo{
+overflow:hidden;
+border-radius:20px;
+background:rgba(255,255,255,.15);
+padding:8px;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+transition:0.4s;
+}
+
+.photo:hover{
+transform:translateY(-8px) scale(1.03);
+}
+
+.photo img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:15px;
+display:block;
+}
+
+/* ========================= */
+/* WISH SECTION */
+/* ========================= */
+
+#wishSection{
+padding:60px 20px;
+text-align:center;
+}
+
+.cake{
+font-size:90px;
+margin:25px 0;
+animation:bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+#wishSection p{
+font-size:1.15rem;
+line-height:1.8;
+margin-bottom:25px;
+white-space:pre-line;
+}/* ========================= */
+/* GIFT SECTION */
+/* ========================= */
+
+#giftSection{
+padding:60px 20px;
+text-align:center;
+}
+
+.giftBox{
+font-size:110px;
+margin:30px 0;
+animation:giftFloat 2s ease-in-out infinite;
+cursor:pointer;
+transition:.3s;
+}
+
+.giftBox:hover{
+transform:scale(1.1) rotate(5deg);
+}
+
+@keyframes giftFloat{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0px);
+}
+}
+
+/* ========================= */
+/* LOVE LETTER */
+/* ========================= */
+
+#letterSection{
+padding:60px 20px;
+}
+
+#letterText{
+margin-top:25px;
+font-size:18px;
+line-height:1.9;
+text-align:left;
+white-space:pre-wrap;
+min-height:250px;
+}
+
+#proposalBtn{
+margin-top:30px;
+}
+
+/* ========================= */
+/* PROPOSAL */
+/* ========================= */
+
+#proposalSection{
+padding:60px 20px;
+text-align:center;
+}
+
+.proposalText{
+margin:25px auto;
+max-width:700px;
+line-height:1.8;
+font-size:18px;
+}
+
+.proposalButtons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.noBtn{
+position:relative;
+}
+
+#proposalResult{
+margin-top:30px;
+font-size:22px;
+font-weight:600;
+}
+
+/* ========================= */
+/* ENDING */
+/* ========================= */
+
+#endingSection{
+padding:70px 20px;
+text-align:center;
+}
+
+#endingMessage{
+margin-top:25px;
+font-size:18px;
+line-height:2;
+}/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+padding:30px 20px;
+text-align:center;
+font-size:16px;
+color:#ffffff;
+opacity:.9;
+}
+
+/* ========================= */
+/* HEARTS & PETALS */
+/* ========================= */
+
+.heart,
+.petal{
+position:fixed;
+top:-50px;
+pointer-events:none;
+z-index:9999;
+animation:fall linear forwards;
+}
+
+.heart{
+font-size:24px;
+}
+
+.petal{
+font-size:20px;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-60px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0;
+}
+
+}
+
+/* ========================= */
+/* FADE ANIMATION */
+/* ========================= */
+
+.fadeIn{
+animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.title{
+font-size:2.2rem;
+}
+
+.subtitle{
+font-size:1.5rem;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero p,
+.intro,
+.proposalText,
+#letterText,
+#endingMessage{
+font-size:16px;
+}
+
+.galleryGrid{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.photo img{
+height:180px;
+}
+
+.mainBtn{
+width:90%;
+font-size:17px;
+padding:14px;
+}
+
+.glass{
+padding:25px;
+}
+
+.cake{
+font-size:70px;
+}
+
+.giftBox{
+font-size:90px;
+}
+
+.proposalButtons{
+flex-direction:column;
+align-items:center;
+}
+
+}
+
+/* ========================= */
+/* EFFECTS LAYER */
+/* ========================= */
+
+#effects{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:999;
+}
